@@ -514,3 +514,90 @@ body.dark-mode {
 .contact-info a:hover {
   text-decoration: underline;
 }
+
+
+/* === Responsive Fixes for Mobile Screens === */
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+
+  .profile-pic {
+    width: 140px;
+    height: 140px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    padding: 0.5rem;
+  }
+
+  #theme-toggle {
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.2rem;
+    padding: 0.4rem 0.5rem;
+  }
+
+  .project-grid,
+  .skills-grid,
+  .blog-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .projects,
+  .skills,
+  .resume {
+    padding: 2rem 1rem;
+  }
+
+  .resume h1,
+  .projects h1,
+  .skills h1 {
+    font-size: 2rem;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    margin-left: 40px;
+    padding: 15px 20px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95rem;
+  }
+
+  .download-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .glass-section,
+  .glass-card,
+  .glass-header {
+    border-radius: 12px;
+  }
+}
