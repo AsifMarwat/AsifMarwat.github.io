@@ -5,10 +5,19 @@ function setThemeIcon() {
   toggleButton.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
 }
 
-// Load saved theme
-if (localStorage.getItem('theme') === 'dark') {
+// Load saved theme or default to dark
+let savedTheme = localStorage.getItem('theme');
+
+if (!savedTheme) {
+  // First visit — set dark mode as default
+  savedTheme = 'dark';
+  localStorage.setItem('theme', 'dark');
+}
+
+if (savedTheme === 'dark') {
   body.classList.add('dark-mode');
 }
+
 setThemeIcon();
 
 toggleButton.addEventListener('click', () => {
