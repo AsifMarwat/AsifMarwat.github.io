@@ -59,7 +59,7 @@ body.dark-mode {
 /* Theme toggle button */
 #theme-toggle {
   position: fixed;
-  top: 1.2rem;
+  top: 4.5rem;
   right: 1.2rem;
   background: var(--card-bg);
   color: var(--accent);
