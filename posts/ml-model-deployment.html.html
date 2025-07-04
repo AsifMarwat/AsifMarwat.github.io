@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FastAPI + PostgreSQL Setup</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <!-- same navbar as other pages -->
+  </nav>
+
+  <button id="theme-toggle">🌙</button>
+
+  <article class="blog-post">
+    <h1>🚀 Deploying FastAPI with PostgreSQL</h1>
+    <p class="meta">By <strong>Asif Marwat</strong> · July 5, 2025 · <span class="tags">#FastAPI #PostgreSQL #Backend</span></p>
+
+    <p>Today, I built a FastAPI backend connected to PostgreSQL. I learned how to define models, connect using SQLAlchemy, and test with pgAdmin.</p>
+
+    <h2>🔌 Connecting FastAPI to Postgres</h2>
+    <pre><code class="language-python">
+from sqlalchemy import create_engine
+SQLALCHEMY_DATABASE_URL = "postgresql://postgres:admin123@localhost/dbname"
+engine = create_engine(SQLALCHEMY_DATABASE_URL)
+    </code></pre>
+
+    <h2>🧠 What I Learned</h2>
+    <ul>
+      <li>How to structure a FastAPI project</li>
+      <li>Difference between sync/async DB calls</li>
+      <li>pgAdmin is nice... once it installs 😅</li>
+    </ul>
+
+    <p>Next week, I’ll try Dockerizing this and deploying on Railway.</p>
+  </article>
+
+  <script src="../assets/js/theme-toggle.js" defer></script>
+</body>
+</html>

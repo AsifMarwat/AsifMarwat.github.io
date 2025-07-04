@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Resume | Asif Marwat</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Theme Toggle -->
+  <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+
+  <!-- Resume Section -->
+  <section class="resume">
+    <h1 class="section-title">My Resume</h1>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h2>🎓 Education</h2>
+        <p><strong>Bachelor of Science in Computer Science</strong><br>
+        XYZ University<br>
+        2020 – 2024</p>
+      </div>
+
+      <div class="timeline-item">
+        <h2>💼 Experience</h2>
+        <p><strong>Freelance Data Scientist</strong><br>
+        Worked on ML/DL projects, built models for client use cases, participated in Kaggle competitions.<br>
+        2023 – Present</p>
+      </div>
+
+      <div class="timeline-item">
+        <h2>📜 Certifications</h2>
+        <ul>
+          <li>Python for Data Science – Coursera</li>
+          <li>Machine Learning by Andrew Ng – Coursera</li>
+          <li>Google Data Analytics – Google</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <h2>📂 Download</h2>
+        <a href="#" class="btn download-btn">Download Resume (PDF)</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="assets/js/theme-toggle.js" defer></script>
+
+  <!-- Scroll animation for resume timeline -->
+  <script>
+    const items = document.querySelectorAll('.timeline-item');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+        }
+      });
+    }, { threshold: 0.2 });
+
+    items.forEach(item => {
+      item.style.animationPlayState = 'paused';
+      observer.observe(item);
+    });
+  </script>
+</body>
+</html>
